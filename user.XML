@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+<person ID ="1122162">
+    <User_Name> Sana Hamed</User_Name>
+    <passward> Az123456</passward>
+    <phase> 1</phase>
+    <Level> 1 </Level>
+    <BosName> leader</BosName>
+    <points>100</points>
+  </person>
+
+<person ID ="1120454">
+    <User_Name> Haya Abo Doha </User_Name>
+    <passward> Bx123456</passward>
+    <phase> 1</phase>
+    <Level> 1 </Level>
+    <BosName> leader</BosName>
+    <points>100</points>
+  </person>
+
+<person ID ="1130454">
+    <User_Name> Ghadeer </User_Name>
+    <passward> hisham1234</passward>
+    <phase> 1</phase>
+    <Level> 1 </Level>
+    <BosName> leader</BosName>
+    <points>100</points>
+  </person>
+
+<person ID ="1127854">
+    <User_Name> Maha </User_Name>
+    <passward> hm123456</passward>
+    <phase> 1</phase>
+    <Level> 1 </Level>
+    <BosName> leader</BosName>
+    <points>100</points>
+  </person>
+
+<person ID ="1156054">
+    <User_Name> Lama </User_Name>
+    <passward> La123456</passward>
+    <phase> 1</phase>
+    <Level> 1 </Level>
+    <BosName> leader</BosName>
+    <points>100</points>
+  </person>
+</user>
