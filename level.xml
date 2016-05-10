@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phase >
+
+<level>
+<friend_id1 > 1122162</friend_id1>
+<friend_id2 > 1120454</friend_id2>
+</level>
+
+
+<level>
+<friend_id1> 1120454</friend_id1>
+<friend_id2> 1130454</friend_id2>
+</level>
+
+
+<level>
+<friend_id1> 1127854</friend_id1>
+<friend_id2> 1130454</friend_id2>
+</level>
+
+
+<level>
+<friend_id1> 1156054</friend_id1>
+<friend_id2> 1130454</friend_id2>
+</level>
+
+<level>
+<friend_id1> 1120454</friend_id1>
+<friend_id2> 1127854</friend_id2>
+</level>
+
+
+</phase>
