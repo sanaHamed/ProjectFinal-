@@ -10,9 +10,9 @@ package File;
  * @author LENOVO
  */
 public class User {
-    String id,User_Name, passward,phase,Level,BosName,points;
+   public  String id;public  String User_Name, passward,phase,Level,BosName,points;
     
-    public User (String id,String User_Name, String passward, String phase, String Level,
+    public User (String  id,String User_Name, String passward, String phase, String Level,
                  String BosName, String points){
         this.id=id;
         this.User_Name = User_Name;

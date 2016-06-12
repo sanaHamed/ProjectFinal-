@@ -74,11 +74,11 @@ public class TestParsingXmlWithSAX {
 				peopleCount++;
 				 personId = attributes.getValue("ID");
 				System.out.println("\tID:\t" + personId);
-                               Data1.add(new User(personId,"","","","","",""));
+                             Data1.add(new User(personId ,"","","","","",""));
                                
 			}
                            
-                         if (currentLevel.equals("friendly")){
+                        if (currentLevel.equals("friendly")){
                             System.out.println("The Same Level " + relationCount+ " Between");
                             relationCount++;
                         
@@ -99,41 +99,62 @@ public class TestParsingXmlWithSAX {
 		// Callback to handle the character text data inside an element
 		@Override
 		public void characters(char[] chars, int start, int length) throws SAXException {
-                   
-		 if (currentElement.equals("User_Name")) {
-                        name = new String(chars, start, length);
-				System.out.println("\tName:" +name);
-                   
-				Data1.get(Integer.parseInt(personId)).User_Name = name;
-			} else if (currentElement.equals("passward")) {
-                            passward=new String(chars, start, length);
-                            Data1.get(Integer.parseInt(personId)).passward = passward;
-				System.out.println("\t Passward:" +passward );
+       
+               if (currentElement.equals("User_Name")) {
+                        
+                              for (int i=0;i<Data1.size();i++)
+                              { name = new String(chars, start, length);
+                               if (Data1.get(i).id == personId){
+				Data1.get(i).User_Name = name;
+                             	System.out.println("\tName:" +name);
+
+                              break;}
+                             }
 			}
+                 else if (currentElement.equals("passward")) {
+                           
+                             for (int i=0;i<Data1.size();i++)
+                              {  passward=new String(chars, start, length);
+                              if (Data1.get(i).id == personId){
+                              Data1.get(i).passward = passward;
+				System.out.println("\t Passward:" +passward );
+                                break;
+			} }}
                         
                         else if (currentElement.equals("phase")) {
-                            phase = new String(chars, start, length);
-                           Data1.get(Integer.parseInt(personId)).phase = phase;
+                            for (int i=0;i<Data1.size();i++)
+                              { phase = new String(chars, start, length);
+                           if (Data1.get(i).id == personId){
+                           Data1.get(i).phase = phase;
 				System.out.println("\tphase:" + phase);
-			}
+                                break;
+			}}}
                         else if (currentElement.equals("Level")) {
-                            Level =new String(chars, start, length);
-                            Data1.get(Integer.parseInt(personId)).Level = Level;
-                               
+                            for (int i=0;i<Data1.size();i++)
+                              {     Level =new String(chars, start, length);
+                            if (Data1.get(i).id == personId){
+                            Data1.get(i).Level = Level;
 				System.out.println("\tLevel:" +Level );
-			}
+                                break;
+			}}}
                           else if (currentElement.equals("BosName")) {
-                            BosName =new String(chars, start, length);
-                            Data1.get(Integer.parseInt(personId)).BosName = BosName;
+                               for (int i=0;i<Data1.size();i++)
+                                    {BosName =new String(chars, start, length);
+                            if (Data1.get(i).id == personId){
+                            Data1.get(i).BosName = BosName;
                                
 				System.out.println("\tBosName:" +BosName );
-			}
-                                     else if (currentElement.equals("points")) {
-                            points =new String(chars, start, length);
-                            Data1.get(Integer.parseInt(personId)).points = points;
-                               
+			
+                              break;}}}
+                         else if (currentElement.equals("points")) {
+                               for (int i=0;i<Data1.size();i++)
+                              {points =new String(chars, start, length);
+                             if (Data1.get(i).id == personId){
+                            Data1.get(i).points = points;
 				System.out.println("\tpoints:" +points );
-			}
+                                break;
+			}}
+                         }
 
                         else if (currentElement.equals("friend_id1") ) {
                              id1 =  new String(chars, start, length);
@@ -141,7 +162,7 @@ public class TestParsingXmlWithSAX {
                            for(int i=0;i<Data1.size();i++){
                                 if((" "+Data1.get(i).id).equals(id1))
                                 {
-                             System.out.print("\tName:" +Data1.get(i).Level);
+                             System.out.print("\tName:" +Data1.get(i).User_Name);
                               System.out.print("\tPassward:" +Data1.get(i).passward);
                              System.out.print("\t phase:" +Data1.get(i).phase);
                               System.out.print("\t Level:" +Data1.get(i).Level);
@@ -154,22 +175,29 @@ public class TestParsingXmlWithSAX {
                       
         		System.out.println();
                               
-			} else if (currentElement.equals("friend_id2")) {
+			}else if (currentElement.equals("friend_id2")) {
                              id2=  new String(chars, start, length);
                         System.out.print("\tID2:" +id2);
                         for(int i=0;i<Data1.size();i++){
                           if((" "+Data1.get(i).id).equals(id2)){
-                             System.out.print("\tName:" +Data1.get(i).Level);
+                             System.out.print("\tName:" +Data1.get(i).User_Name);
                               System.out.print("\tPassward:" +Data1.get(i).passward);
                              System.out.print("\t phase:" +Data1.get(i).phase);
                               System.out.print("\t Level:" +Data1.get(i).Level);
                                System.out.print("\t BosName:" +Data1.get(i).BosName);
                                System.out.print("\t points:" +Data1.get(i).points);
+
                                  }
                         
                         }System.out.println();}
-
-                }	} 
+                
+             
+ 
+          } 	
+}
         
-       
+        public static void Method(){
+        }
+        
+      
         } 
